@@ -43,10 +43,10 @@ public partial class MainViewModel : ObservableObject
     [RelayCommand]
     private void ShowInfo()
     {
+        Person.Name = Data;
+
         // 소문자 private필드가 대문자 public프로퍼티로 자동 생성됨
         MessageBox.Show($"Name: {Person.Name}\nAge: {Person.Age}", "Person Info");
-
-        MessageBox.Show(Data);
 
 
         // 이것도 가능하다.
