@@ -1,0 +1,19 @@
+﻿<Window x:Class="hello_community.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:hello_community"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    <StackPanel Margin="10">
+        <TextBlock Text="Name:" FontWeight="Bold" />
+        <TextBox Text="{Binding Person.Name, UpdateSourceTrigger=PropertyChanged}" Margin="0 0 0 10" />
+
+        <TextBlock Text="Age:" FontWeight="Bold" />
+        <TextBox Text="{Binding Person.Age, UpdateSourceTrigger=PropertyChanged}" Margin="0 0 0 10" />
+
+        <Button Content="Show Info" Command="{Binding ShowInfoCommand}" />
+    </StackPanel>
+</Window>
